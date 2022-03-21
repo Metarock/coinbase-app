@@ -15,7 +15,43 @@ const Coin = ({ coin }) => {
                             {/* Get coin logo from the coino props */}
                             <Image src={coin.logo} alt={coin.name} />
                         </CoinIcon>
+                        {/* Coin names */}
+                        <div>
+                            <Primary>{coin.name}</Primary>
+                            <Secondary>{coin.sign}</Secondary>
+                        </div>
                     </NameCol>
+                </div>
+                <div style={{ flex: 2 }}>
+                    {/* Display price */}
+                    <Primary>
+                        {'$'}
+                        {coin.balanceUsd}
+                    </Primary>
+                    {/* Display crypto sign and amount */}
+                    <Secondary>
+                        {coin.balanceCoin} {coin.sign}
+                    </Secondary>
+                </div>
+                <div style={{ flex: 1 }}>
+                    <Primary>
+                        {'$'}
+                        {coin.priceUsd}
+                    </Primary>
+                    {/* display price changes whether positive or negative depending if the change is less than 0 */}
+                    <div
+                        style={{
+                            color: coin.change < 0 ? '#f0616d' : '#26ad75',
+                        }}
+                    >
+                        {coin.change > 0 && '+'}
+                        {coin.change}%
+                    </div>
+                    {/* How much of allocation of our budget is in it */}
+                    <div style={{ flex: 1 }}>{coin.allocation}%</div>
+                    <div style={{ flex: 0 }}>
+                        <BsThreeDotsVertical />
+                    </div>
                 </div>
             </div>
         </Wrapper>
