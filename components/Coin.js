@@ -47,7 +47,7 @@ const Coin = ({ coin }) => {
                         {coin.change > 0 && '+'}
                         {coin.change}%
                     </div>
-                    {/* How much of allocation of our budget is in it */}
+                    {/* How much of allocation of our budget is in it; meaning how much the user has for that crypto */}
                     <div style={{ flex: 1 }}>{coin.allocation}%</div>
                     <div style={{ flex: 0 }}>
                         <BsThreeDotsVertical />
