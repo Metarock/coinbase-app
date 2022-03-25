@@ -34,7 +34,7 @@ const Wrapper = styled.div`
 const OfferCard = styled.div`
     width: 21rem;
     height: 11rem;
-    border: 1px solid #282bf;
+    border: 1px solid #2822bf;
     margin-bottom: 1rem;
     padding: 1.5rem;
     display: flex;
